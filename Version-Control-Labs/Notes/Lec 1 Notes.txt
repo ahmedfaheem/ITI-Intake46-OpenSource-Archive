@@ -1,0 +1,54 @@
+git --version
+git config  --global user.name   -- to get value
+git config  --global user.name "new Value" -- to set
+git config  --global user.email
+git config  --global user.email "ahmed@gmail.com"
+git config  --list   -- get all configs
+git config --global init.defaultBranch main     --change to main instead of master
+mkdir git-demo -- create directory 
+ls -a    get hidden file
+ls       all get files  except hidden
+git status   --> get the status of files that has modifications
+cd "E:"  --> go to directory in other partition 
+git init   --> create repo
+$ git add index.html  -- add this file only to  staging
+$ git add  .     --> add all file to staging
+$ git log  --> git all commited data
+$ git commit -m "first Commit"    -- m (message) -- add commit with message
+cat  index.html   --> view content
+
+echo "<h1>Hello</h1>" > index.html    -- add data to file
+$ git commit -m "add heading"       
+git log --oneline --graph --decorate    --> style log
+git commit -am "message"    --> add to stage and commit  -- but file must added to repo before -- work for modified files 
+git restore --staged style.css   --> return file to unstage
+
+‎git reset --hard <sha>     -- return to this commit and delete the current and no modifications in working dirctory and stages
+ ‎git reset --soft <sha>     -- return to this commit but modification at staged
+ ‎git restore --staged <file>    -> return file to unstage  in working direcotry
+ ‎git restore <file>  -->  Deletes changes from the file and restores it to the last commit of it  -- like undo
+git reflog --> get last history  to restore deleted commit -- saved for 90day
+
+git commit --amend  -m "name"  --> changes the last commit’s message (or content/author), but Git does not edit the commit directly — it creates a new commit to replace it.
+The old commit is effectively deleted and replaced, so the new commit gets a new SHA so you can return to last also
+
+git reset --hard HEAD^  back one commit
+git reset --hard HEAD^^    back to two commit
+git reset --hard HEAD~2     back to two commit
+git diff  -->compares the changes in your working directory against the last commit (i.e., uncommitted modifications that not added to stage).
+git diff sha1  sha2   --> diffrence between 2 commit
+git branch
+git branch -M main   --> modify branch to main
+ssh-keygen -t ed25519  -C "email@gmail.com"    create key of type t for mail
+cd ./.ssh
+cat id_ed25519.pub   
+git remote add origin git@github.com:ahmedfaheem/demo-mans.git
+git remote -v   --> shows all remote repositories linked to your project, along with their fetch and push URLs.
+git push -u origin main   -- sets main as the default branch to push and pull from origin, so next time you can just type git push without arguments.
+as this --> git push
+git pull --> to get data 
+
+git clone [ssh-url]  --> git@github.com:ahmedfaheem/demo-mans.git   --> download repo from github
+
+
+
